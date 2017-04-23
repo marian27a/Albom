@@ -1,0 +1,26 @@
+<nav class="breadcrumb">
+    <span class="breadcrumb-item active">Alboms</span>
+</nav> 
+<div class="row">  
+    <div id="loader-wrapper" ng-if="vm.showLoader">
+        <div id="loader"></div>
+    </div>
+    <div class=" col-xs-6 col-sm-3 col-xs-offset-6 col-sm-offset-9">
+        <input  style="margin-bottom: 40px;"type="text" class="form-control" placeholder="Search" ng-model="vm.serchStr">
+     </div>
+     <div class = "alboms">
+         <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="albom in (vm.filteredAlboms = (vm.alboms| filter: vm.serchStr)) | limitTo : vm.albomsPerPage : vm.albomsPerPage*(vm.currentPage - 1)">
+             <a href="#!/photos" ng-click="vm.loadAlbom(albom.id, albom.title)">
+                <div class="albom">
+                    <h5 ng-bind="albom.title|uppercase"></h5>
+                    <div class="albom-photo photo1"><div class="img"></div></div>
+                    <div class="albom-photo photo2"><div class="img"></div></div>
+                    <div class="albom-photo photo3"><div class="img"></div></div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 text-center"> 
+               <ul uib-pagination total-items="vm.totalAlboms" ng-model="vm.currentPage" ng-if="!vm.showLoader" class="pagination-sm" boundary-links="true"></ul>
+        </div>
+    </div>
+</div>   

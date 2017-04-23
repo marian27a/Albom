@@ -1,0 +1,20 @@
+ <nav class="breadcrumb">
+  <a class="breadcrumb-item" href="#!/">Alboms</a>
+  /<a class="breadcrumb-item" href="#!/photos"><span ng-bind="vm.selectedAlbom |uppercase"></span></a>
+  /<span class="breadcrumb-item active" ng-bind="vm.selectedPhoto.title |uppercase"></span>
+</nav>
+<div class="row">
+    <div id="loader-wrapper" ng-if="vm.showLoader">
+        <div id="loader"></div>
+    </div>
+    <div class = "selectedPhoto">
+       <div class="col-xs-12">
+            <div class="photoName">
+                <span class=""> <strong>Name of Photo: </strong>{{vm.selectedPhoto.title|uppercase}}</span>
+            </div>
+        </div>
+        <div class="col-xs-10">
+           <img ng-src="{{vm.shownPhotoUrl}}" alt="">
+        </div>
+    </div>
+</div>

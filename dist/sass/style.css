@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* line 1, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+body {
+  background-color: white;
+  height: 1000px; }
+
+/* line 6, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+#nav-top-wrapper {
+  float: left; }
+  /* line 8, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+  #nav-top-wrapper nav {
+    height: 64px;
+    background-color: rgba(77, 182, 172, 0.9); }
+    /* line 11, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+    #nav-top-wrapper nav a {
+      border-radius: 10%;
+      color: black !important; }
+
+/* line 19, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main .parallax-container {
+  height: 680px !important; }
+
+/* line 22, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main .img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px; }
+
+/* line 30, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main #contacts ul {
+  display: inline-block; }
+
+/* line 33, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main #contacts #links {
+  margin: 0px; }
+  /* line 35, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+  main #contacts #links li {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #b2ebf2;
+    float: left;
+    border-radius: 50%; }
+    /* line 42, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+    main #contacts #links li img {
+      width: 40px;
+      height: 40px; }
+    /* line 46, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+    main #contacts #links li .git {
+      padding-bottom: 8px; }
+  /* line 50, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+  main #contacts #links li:hover {
+    background-color: #4dd0e1; }
+
+/* line 54, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main #contacts h5 {
+  display: inline-block;
+  margin-right: 10px; }
+
+/* line 58, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main #contacts span {
+  font-size: 20px; }
+
+/* line 61, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+main #contacts .number:before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 33px;
+  height: 18px;
+  background: url(../img/cont-number.png) no-repeat;
+  vertical-align: middle; }
+
+/* line 72, C:/Users/Marian/Google Диск/projectCard/dist/sass/style.scss */
+.page-footer {
+  padding-top: 0px !important; }
+
+/*# sourceMappingURL=style.css.map */

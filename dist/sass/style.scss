@@ -1,0 +1,226 @@
+$albomWidth: 80%;
+$albomHeight: 210px;
+$albomBg: #E6E6FA;
+$photoWidth: 180px;
+$photoBg: #fff;
+$photoHeight: 185px;
+
+
+
+body{
+    background: url('../img/Bg.jpg') no-repeat fixed center top;
+    padding-bottom: 30px;
+    .breadcrumb{
+        margin-top: 20px;
+    }
+    .container {
+    background-color: rgba(00,00,00,0.5);
+    }
+    background-color: #b3e5fc;
+    .alboms{
+        .albom{
+            color: black;
+            border-top-right-radius: 7%;
+            border-bottom-right-radius: 7%;
+            border-bottom-left-radius: 2%;
+            border-top-left-radius: 2%;
+            background-color: $albomBg;
+            margin-bottom: 35px;
+            height: $albomHeight;
+            padding-top: 10px;                
+            margin-left: auto;
+            margin-right: auto;
+            width: $albomWidth;
+            text-align: center;
+            position:relative;
+            opacity: 0.98;            
+            .albom-photo{
+                height: 45px;
+                border: 2px solid black;
+                width: 40px;
+                background-color: white;
+                position: absolute;
+                top: 45%;
+                -webkit-transition: height 0.5s, width 0.5s; /* For Safari 3.1 to 6.0 */
+                transition: height 0.5s, width 0.5s;
+                //transition: width 2s;
+                //transition: top 2s;
+                
+                .img{
+                    margin-top: 3px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 80%;
+                    height: 70%;
+                    background: #A9A9A9;
+                    border: 1px solid black;
+                }
+
+            }
+            .photo1{
+                right: 23%;
+                transform: rotate(30deg);
+            }
+            .photo2{
+                right: 43%;
+            }
+            .photo3{
+                right: 58%;
+                transform: rotate(-30deg);
+            }
+        }
+        .albom:hover{
+            background-color: #F5F5F5;
+            .albom-photo{
+                height: 65px;
+                width: 60px;
+            }
+        }
+    }
+    .photos{
+        .photo{
+            background-color: $photoBg;
+            width: $photoWidth;
+            margin-bottom: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            height: $photoHeight;
+            padding-top: 3px;
+            border: 3px solid black;
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border: 3px solid black;
+            }
+            img:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+    .selectedPhoto{
+        .photoName{
+            background-color: rgba(192,192,192,0.6);
+            display: inline-block;
+            margin-bottom: 20px;
+            
+        }
+        img{
+            border: 2px solid white;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+ 
+        border: 30px solid #03a9f4;
+        z-index: 1500;
+        -webkit-animation: spin 0.6s linear infinite;
+        animation: spin 0.6s linear infinite;
+    }
+    #loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid #e74c3c;
+        -webkit-animation: spin 0.3s linear infinite;
+        animation: spin 0.3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid #f9c922;
+    -webkit-animation: spin 0.2s linear infinite;
+        animation: spin 0.2s linear infinite;
+}
+    /* change border to transparent and set only border-top to a solid color */
+#loader {
+    border: 5px solid transparent;
+    border-top-color: #03a9f4;
+    border-bottom-color: #e1f5fe;
+}
+#loader:before {
+    border: 3px solid transparent;
+    border-top-color: #3949ab;
+    border-bottom-color: #9fa8da;
+}
+#loader:after {
+    border: 3px solid transparent;
+    border-top-color: #bdbdbd;
+}
+    #loader {
+    border-radius: 50%;
+}
+#loader:before {
+    border-radius: 50%;
+}
+#loader:after {
+    border-radius: 50%;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+*{
+    text-decoration: none !important;
+}
+
+
+@media(max-width: 767px)and (min-width: 645px){
+    body{
+        .albom{
+            width: 65% !important;
+        }
+    }
+}
+@media(max-width: 515px){
+    body{
+        padding-top: 30px;
+        .albom{
+            width: 95% !important;
+        }
+    }
+}
+
+@media(max-width: 400px){
+        .photos{
+        .photo{
+            width: 150px!important;
+            border: 1px solid black;
+            background-color: transparent !important;
+            border: none !important;
+        }
+    }
+}
