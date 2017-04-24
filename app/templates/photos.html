@@ -7,7 +7,7 @@
         <div id="loader"></div>
     </div>
      <div class = "photos" ng-if="!vm.showLoader">
-         <div class="col-xs-6 col-sm-3" ng-repeat="photo in (vm.filteredPhotos = (vm.photos | limitTo : vm.photosPerPage : photosPerPage*(vm.currentPhotoPage - 1)))">
+         <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="photo in (vm.filteredPhotos = (vm.photos | limitTo : vm.photosPerPage : photosPerPage*(vm.currentPhotoPage - 1)))">
              <a href="#!/photo" ng-click="vm.showPhoto(photo)">
                  <div class="photo">
                      <img ng-src="{{photo.thumbnailUrl}}" alt="photo">
